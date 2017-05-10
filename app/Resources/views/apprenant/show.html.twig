@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Apprenant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ apprenant.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ apprenant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ apprenant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Birth</th>
+                <td>{% if apprenant.birth %}{{ apprenant.birth|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Promo</th>
+                <td>{{ apprenant.promo }}</td>
+            </tr>
+            <tr>
+                <th>Dispo</th>
+                <td>{{ apprenant.dispo }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ apprenant.email }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ apprenant.password }}</td>
+            </tr>
+            <tr>
+                <th>Skills</th>
+                <td>{{ apprenant.skills }}</td>
+            </tr>
+            <tr>
+                <th>Imgprofil</th>
+                <td>{{ apprenant.imgProfil }}</td>
+            </tr>
+            <tr>
+                <th>Cv</th>
+                <td>{{ apprenant.cv }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('apprenant_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('apprenant_edit', { 'id': apprenant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

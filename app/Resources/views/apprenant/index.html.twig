@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<header class="container">
+  <img id="simplon" src="{{ asset('assets/img/simplonBSM.png') }}">
+  <div id="phrase"><p>Adopte ton developpeur web ★</p></div>
+</header>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="pages/lebook.php">LE BOOK C'EST QUOI ?</a></li>
+        <li><a>PROMO 1</a></li>
+        <li><a>PROMO 2</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+    <h1>Apprenants list</h1>
+
+    <!-- <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Birth</th>
+                <th>Promo</th>
+                <th>Dispo</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Skills</th>
+                <th>Imgprofil</th>
+                <th>Cv</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for apprenant in apprenants %}
+            <tr>
+                <td><a href="{{ path('apprenant_show', { 'id': apprenant.id }) }}">{{ apprenant.id }}</a></td>
+                <td>{{ apprenant.nom }}</td>
+                <td>{{ apprenant.prenom }}</td>
+                <td>{% if apprenant.birth %}{{ apprenant.birth|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ apprenant.promo }}</td>
+                <td>{{ apprenant.dispo }}</td>
+                <td>{{ apprenant.email }}</td>
+                <td>{{ apprenant.password }}</td>
+                <td>{{ apprenant.skills }}</td>
+                <td>{{ apprenant.imgProfil }}</td>
+                <td>{{ apprenant.cv }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('apprenant_show', { 'id': apprenant.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('apprenant_edit', { 'id': apprenant.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> -->
+{% for apprenant in apprenants %}
+    <div class="profil col col-md-3 col-sm-4 col-xs-12">
+      <div class="profil1" style="width: 105%;">
+        <div><img class="imgProfile img-responsive center-block" src=""></div>
+        <p class="name">{{ apprenant.nom }} {{ apprenant.prenom }}</p>
+        <p>Back</p>
+        <button type="button" class="btn btnProfil {{ apprenant.dispo }}" data-toggle="modal" data-target="#myModal'.$data["id"].'">{{ apprenant.dispo }}</button>
+      </div>
+    </div>
+{% endfor %}
+    <ul>
+        <li>
+            <a href="{{ path('apprenant_new') }}">Create a new apprenant</a>
+        </li>
+    </ul>
+{% endblock %}

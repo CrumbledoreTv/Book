@@ -1,0 +1,161 @@
+html {
+	overflow-y: scroll;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	position: relative;
+}
+
+/* NAVBAR */
+
+.navbar-default, .navbar-default *{
+	background-color: #f4f1f1;
+	border: none;
+}
+
+nav{
+	height: 40px;
+	z-index: 1;
+}
+
+nav li a{
+	text-decoration: none;
+	color: black;
+}
+
+nav li{
+	display: inline;
+	margin-right: 100px;
+}
+
+nav ul {
+	list-style: none;
+}
+
+/* INDEX */
+
+.profil{
+	height: 380px;
+	margin-top: 20px;
+}
+
+.profil1{
+	height: 380px;
+	background-color: #f4f1f1;
+	padding: 5px 10px 5px 10px;
+}
+
+.imgProfile{
+	height: 250px;
+	margin-top: 10px;
+}
+
+.btnProfil{
+	float: right;
+}
+
+.name{
+	color: #286090;
+}
+
+
+#simplon{
+	height: 90px;
+	float: left;
+}
+
+#phrase{
+	float: right;
+	margin-top: 2.5%;
+	font-size: 17px;
+}
+
+/*MODAL CSS*/
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+	position: fixed;
+	margin: auto;
+	width: 320px;
+	height: 100%;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+	height: 100%;
+	overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+	padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+	left: -320px;
+	-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+	-moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+	-o-transition: opacity 0.3s linear, left 0.3s ease-out;
+	transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+	left: 0;
+}
+
+.containerChart {
+	width: auto;
+	margin: 15px auto;
+}
+
+
+/*##################*/
+
+form{
+	padding: 14px;
+}
+
+#login{
+	text-align: center;
+}
+
+.lienOk{
+	color: red;
+}
+
+/* LE BOOK */
+
+#bookTitre{
+	text-decoration: underline;
+	margin-bottom: 60px;
+	margin-top: 60px;
+	color: #00A8C9;
+}
+
+#texteBook{
+	margin-bottom: 60px;
+	color: #0076B2;
+}
+
+
+/* FOOTER */
+
+footer {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	background-color: #f4f1f1;
+}
+
+footer *{
+	margin-top: 20px;
+}
